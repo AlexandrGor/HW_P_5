@@ -11,7 +11,7 @@ def logger(path = "logger.txt"):
             result = old_function(*args, **kwargs)
             func_name = old_function.__name__
             arguments = f"args: {args}\nkwargs:{kwargs}"
-            with open(path, 'a') as f:
+            with open(path, 'a', encoding="utf-8") as f:
                     f.write(f"==================================\n"
                             f"Дата, время: {date_time}\n"
                             f"Имя функции: {func_name}\n"
